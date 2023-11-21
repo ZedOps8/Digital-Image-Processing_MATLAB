@@ -1,0 +1,11 @@
+%Write a MATLAB code that reads a gray scale image and generates the flipped image of original image%
+url = 'https://bit.ly/3tdQ9xG';
+colorImage = imread(url);
+grayImage = rgb2gray(colorImage);
+flippedGrayImage = flipud(grayImage);
+subplot(1, 2, 1);
+imshow(grayImage);
+title('Grayscale Image');
+subplot(1, 2, 2);
+imshow(flippedGrayImage);
+title('Flipped Grayscale Image')
