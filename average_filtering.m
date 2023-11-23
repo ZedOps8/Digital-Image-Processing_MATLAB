@@ -1,0 +1,12 @@
+imageURL = 'https://cdnpt01.viewbug.com/media/mediafiles/2017/01/09/70755471_large.jpg';
+originalImage = imread(imageURL);
+filterSize = 3;
+averagingFilter = fspecial('average', [filterSize filterSize]);
+averagedImage = imfilter(originalImage, averagingFilter);
+figure;
+subplot(1, 2, 1);
+imshow(originalImage);
+title('Original Image');
+subplot(1, 2, 2);
+imshow(averagedImage);
+title('Averaging Filtered Image');
